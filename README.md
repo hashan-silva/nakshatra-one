@@ -9,6 +9,15 @@
 This repository contains a basic project structure for an astrology application.
 It includes a Java backend built with Maven and a placeholder Angular frontend.
 
+## Contributing
+
+This project has specific guidelines for contributions. Please review the following files before getting started:
+
+- **`AGENTS.md`**: Provides a detailed overview of the project's architecture, technologies, and coding conventions for human developers.
+- **`GEMINI.md`**: Contains instructions tailored for the Gemini AI assistant, ensuring that its contributions align with the project's standards.
+
+All contributors, including AI, are expected to follow the workflow of understanding the context and planning before implementing changes.
+
 ## Backend (Maven)
 * **Location**: `backend/`
 * Run tests with `mvn test`
