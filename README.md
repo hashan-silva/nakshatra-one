@@ -25,3 +25,18 @@ All contributors, including AI, are expected to follow the workflow of understan
 ## Frontend (Angular)
 * **Location**: `frontend/`
 * Intended to be generated with the Angular CLI. The current structure is a minimal placeholder.
+
+## Docker
+
+This project uses Docker to containerize the frontend and backend applications.
+The Docker images are automatically built and pushed to Docker Hub by a GitHub workflow.
+
+To enable this workflow, you need to add the following secrets to your GitHub repository:
+- `DOCKERHUB_USERNAME`: Your Docker Hub username.
+- `DOCKERHUB_TOKEN`: Your Docker Hub access token.
+
+The workflow will then push the images to:
+-   **Backend Image:** `<your-dockerhub-username>/nakshatra-one-backend`
+-   **Frontend Image:** `<your-dockerhub-username>/nakshatra-one-frontend`
+
+The workflow is defined in `.github/workflows/docker-publish.yml`.

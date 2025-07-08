@@ -78,3 +78,7 @@ Please follow this format for all Git commits:
 -   **Examples:**
     -   `feat(kundli): add North Indian chart generator`
     -   `fix(panchang): correct sunrise time calculation`
+
+### Pull Request Guidelines
+
+-   If the pull request is created by Gemini, please add the label `Gemini` to the PR.

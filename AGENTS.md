@@ -90,6 +90,10 @@ Please follow this format for all Git commits:
 - Update `README.md` whenever commands or project layout change.
 - Do not modify this `AGENTS.md` file.
 
+### Pull Request Guidelines
+
+-   If the pull request is created by Codex, please add the label `Codex` to the PR.
+
 ## Testing
 
 ### Backend (Java - Spring Boot)
