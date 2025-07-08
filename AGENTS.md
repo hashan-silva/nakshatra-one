@@ -8,6 +8,10 @@
 
 Agents working on this project should follow these core principles:
 
+### Workflow
+1.  **Understand the Context:** Before writing or modifying code, thoroughly review all relevant files to understand the existing architecture, patterns, and conventions.
+2.  **Create a Plan:** Formulate a clear to-do list or a step-by-step plan. This helps ensure all aspects of the task are covered.
+
 ### 🔧 Technologies
 - **Backend:** Java 17+, Spring Boot, REST APIs, Swiss Ephemeris (JNI)
 - **Frontend:** Angular 16+, Bootstrap or Tailwind CSS
