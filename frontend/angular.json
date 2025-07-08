@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/angular-cli",
+  "version": 1,
+  "projects": {
+    "astrology-frontend": {
+      "projectType": "application",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/astrology-frontend",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": []
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "astrology-frontend:build"
+          }
+        }
+      }
+    }
+  }
+}
