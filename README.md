@@ -1,7 +1,7 @@
 # Nakshatra One
 [![CodeQL](https://github.com/hashan-silva/nakshatra-one/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/hashan-silva/nakshatra-one/actions/workflows/github-code-scanning/codeql)
 
-[![SonarQube analysis](https://github.com/hashan-silva/nakshatra-one/actions/workflows/sonarqube.yml/badge.svg)](https://github.com/hashan-silva/nakshatra-one/actions/workflows/sonarqube.yml)
+[![SonarCloud analysis](https://github.com/hashan-silva/nakshatra-one/actions/workflows/sonarcloud.yml/badge.svg)](https://github.com/hashan-silva/nakshatra-one/actions/workflows/sonarcloud.yml)
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=hashan-silva_nakshatra-one&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=hashan-silva_nakshatra-one)
 
