@@ -10,6 +10,8 @@ RUN npm install
 
 COPY --chown=appuser:appuser . .
 
+RUN chmod -R go-w .
+
 USER appuser
 
 RUN npm run build -- --configuration production
