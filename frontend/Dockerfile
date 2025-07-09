@@ -1,19 +1,29 @@
 FROM node:18-alpine
 
-WORKDIR /app
+RUN adduser --system --disabled-password --group appuser
 
-COPY package*.json ./
+WORKDIR /home/appuser/app
+
+COPY --chown=appuser:appuser package*.json ./
 
 RUN npm install
 
-COPY . .
+COPY --chown=appuser:appuser . .
+
+RUN chmod -R go-w .
+
+USER appuser
 
 RUN npm run build -- --configuration production
 
 FROM nginx:alpine
 
-COPY --from=0 /app/dist/nakshatra-one /usr/share/nginx/html
+COPY --from=0 /home/appuser/app/dist/astrology-frontend /usr/share/nginx/html
+
+RUN chmod -R go-w /usr/share/nginx/html
 
 EXPOSE 80
+
+USER nginx
 
 CMD ["nginx", "-g", "daemon off;"]

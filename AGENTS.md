@@ -77,6 +77,33 @@ Agents working on this project should follow these core principles:
 - Ensure time zone accuracy in all planetary calculations
 ---
 
+### Best Practices
+- Document each API endpoint using Swagger
+- Follow Angular style guide (modularize features)
+- Write unit/integration tests (JUnit for backend, Jasmine/Karma for frontend)
+- Ensure time zone accuracy in all planetary calculations
+
+### Code Quality and Linting
+
+-   **Backend (Java/Spring Boot):** Run `mvn validate` to check for code quality issues and enforce coding standards.
+-   **Frontend (Angular):** Run `ng lint` to identify and fix linting issues.
+
+---
+
+### Security Vulnerability Checks
+
+-   **Backend (Java/Spring Boot):**
+    -   Integrate **OWASP Dependency-Check** to identify known vulnerabilities in project dependencies.
+    -   Utilize **SonarQube** for static code analysis, focusing on security-related rules.
+    -   Consider **Snyk** for continuous security monitoring of dependencies and code.
+-   **Frontend (Angular):**
+    -   Regularly run `npm audit` to identify and fix vulnerabilities in Node.js packages.
+    -   Integrate **SonarQube** for static code analysis, including security rules.
+    -   Consider **Snyk** for continuous security monitoring of dependencies and code.
+-   **CI/CD Integration:** Automate security checks within the CI/CD pipeline to catch vulnerabilities early.
+
+---
+
 ## Commit Instructions
 
 Please follow this format for all Git commits:
@@ -92,7 +119,7 @@ Please follow this format for all Git commits:
 
 ### Pull Request Guidelines
 
--   If the pull request is created by Codex, please add the label `Codex` to the PR.
+-   If the pull request is created by Codex, please add the label `codex` to the PR.
 
 ## Testing
 

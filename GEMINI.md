@@ -55,6 +55,34 @@ Analyze existing code before making changes.
 
 ---
 
+### Best Practices:
+
+-   Document new API endpoints using Swagger.
+-   Follow the Angular style guide, creating modular features.
+-   Ensure time zone accuracy in all planetary calculations.
+-   Use DTOs for request/response objects.
+
+### Code Quality and Linting
+
+-   **Backend (Java/Spring Boot):** Run `mvn validate` to check for code quality issues and enforce coding standards.
+-   **Frontend (Angular):** Run `ng lint` to identify and fix linting issues.
+
+---
+
+### Security Vulnerability Checks
+
+-   **Backend (Java/Spring Boot):**
+    -   Integrate **OWASP Dependency-Check** to identify known vulnerabilities in project dependencies.
+    -   Utilize **SonarQube** for static code analysis, focusing on security-related rules.
+    -   Consider **Snyk** for continuous security monitoring of dependencies and code.
+-   **Frontend (Angular):**
+    -   Regularly run `npm audit` to identify and fix vulnerabilities in Node.js packages.
+    -   Integrate **SonarQube** for static code analysis, including security rules.
+    -   Consider **Snyk** for continuous security monitoring of dependencies and code.
+-   **CI/CD Integration:** Automate security checks within the CI/CD pipeline to catch vulnerabilities early.
+
+---
+
 ### Testing
 
 **Backend (Java - Spring Boot):**
@@ -81,4 +109,4 @@ Please follow this format for all Git commits:
 
 ### Pull Request Guidelines
 
--   If the pull request is created by Gemini, please add the label `Gemini` to the PR.
+-   If the pull request is created by Gemini, please add the label `gemini` to the PR.

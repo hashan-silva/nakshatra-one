@@ -1,11 +1,17 @@
-FROM openjdk:17-jdk-slim
+FROM amazoncorretto:17
 
-WORKDIR /app
+RUN groupadd --system appgroup && useradd --system --gid appgroup appuser
 
-COPY . .
+WORKDIR /home/appuser/app
+
+COPY --chown=appuser:appgroup . .
+
+RUN chmod -R go-w .
 
 RUN ./mvnw package -DskipTests
 
 EXPOSE 8080
+
+USER appuser
 
 CMD ["java", "-jar", "target/nakshatra-one-1.0.0.jar"]
