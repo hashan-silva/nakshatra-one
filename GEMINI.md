@@ -55,6 +55,20 @@ Analyze existing code before making changes.
 
 ---
 
+### Best Practices:
+
+-   Document new API endpoints using Swagger.
+-   Follow the Angular style guide, creating modular features.
+-   Ensure time zone accuracy in all planetary calculations.
+-   Use DTOs for request/response objects.
+
+### Code Quality and Linting
+
+-   **Backend (Java/Spring Boot):** Run `mvn validate` to check for code quality issues and enforce coding standards.
+-   **Frontend (Angular):** Run `ng lint` to identify and fix linting issues.
+
+---
+
 ### Security Vulnerability Checks
 
 -   **Backend (Java/Spring Boot):**
@@ -95,4 +109,4 @@ Please follow this format for all Git commits:
 
 ### Pull Request Guidelines
 
--   If the pull request is created by Gemini, please add the label `Gemini` to the PR.
+-   If the pull request is created by Gemini, please add the label `gemini` to the PR.

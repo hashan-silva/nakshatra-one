@@ -77,6 +77,19 @@ Agents working on this project should follow these core principles:
 - Ensure time zone accuracy in all planetary calculations
 ---
 
+### Best Practices
+- Document each API endpoint using Swagger
+- Follow Angular style guide (modularize features)
+- Write unit/integration tests (JUnit for backend, Jasmine/Karma for frontend)
+- Ensure time zone accuracy in all planetary calculations
+
+### Code Quality and Linting
+
+-   **Backend (Java/Spring Boot):** Run `mvn validate` to check for code quality issues and enforce coding standards.
+-   **Frontend (Angular):** Run `ng lint` to identify and fix linting issues.
+
+---
+
 ### Security Vulnerability Checks
 
 -   **Backend (Java/Spring Boot):**
