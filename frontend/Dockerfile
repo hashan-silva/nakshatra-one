@@ -1,16 +1,16 @@
 FROM node:18-alpine
 
-RUN adduser --system --disabled-password --group appuser
+RUN addgroup -S appuser && adduser -S -G appuser appuser
 
 WORKDIR /home/appuser/app
+
+RUN chown -R appuser:appuser /home/appuser/app
 
 COPY --chown=appuser:appuser package*.json ./
 
 RUN npm install
 
 COPY --chown=appuser:appuser . .
-
-RUN chmod -R go-w .
 
 USER appuser
 

@@ -1,4 +1,4 @@
-FROM amazoncorretto:17
+FROM openjdk:17-jdk-slim
 
 RUN groupadd --system appgroup && useradd --system --gid appgroup appuser
 
