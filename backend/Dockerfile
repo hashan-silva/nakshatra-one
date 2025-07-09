@@ -1,6 +1,6 @@
 FROM amazoncorretto:17
 
-RUN groupadd --system appgroup && useradd --system --gid appgroup appuser
+RUN addgroup -S appgroup && adduser -S -G appgroup appuser
 
 WORKDIR /home/appuser/app
 

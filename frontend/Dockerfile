@@ -1,6 +1,6 @@
 FROM node:18-alpine
 
-RUN adduser --system --disabled-password --group appuser
+RUN addgroup -S appuser && adduser -S -G appuser appuser
 
 WORKDIR /home/appuser/app
 
