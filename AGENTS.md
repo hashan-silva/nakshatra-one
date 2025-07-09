@@ -119,7 +119,7 @@ Please follow this format for all Git commits:
 
 ### Pull Request Guidelines
 
--   If the pull request is created by Codex, please add the label `Codex` to the PR.
+-   If the pull request is created by Codex, please add the label `codex` to the PR.
 
 ## Testing
 
