@@ -1,6 +1,6 @@
-FROM amazoncorretto:17
+FROM openjdk:17-jdk-slim
 
-RUN addgroup -S appgroup && adduser -S -G appgroup appuser
+RUN groupadd --system appgroup && useradd --system --gid appgroup appuser
 
 WORKDIR /home/appuser/app
 
