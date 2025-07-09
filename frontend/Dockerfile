@@ -20,6 +20,8 @@ FROM nginx:alpine
 
 COPY --from=0 /home/appuser/app/dist/astrology-frontend /usr/share/nginx/html
 
+RUN chmod -R go-w /usr/share/nginx/html
+
 EXPOSE 80
 
 USER nginx
