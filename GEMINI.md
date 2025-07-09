@@ -55,6 +55,20 @@ Analyze existing code before making changes.
 
 ---
 
+### Security Vulnerability Checks
+
+-   **Backend (Java/Spring Boot):**
+    -   Integrate **OWASP Dependency-Check** to identify known vulnerabilities in project dependencies.
+    -   Utilize **SonarQube** for static code analysis, focusing on security-related rules.
+    -   Consider **Snyk** for continuous security monitoring of dependencies and code.
+-   **Frontend (Angular):**
+    -   Regularly run `npm audit` to identify and fix vulnerabilities in Node.js packages.
+    -   Integrate **SonarQube** for static code analysis, including security rules.
+    -   Consider **Snyk** for continuous security monitoring of dependencies and code.
+-   **CI/CD Integration:** Automate security checks within the CI/CD pipeline to catch vulnerabilities early.
+
+---
+
 ### Testing
 
 **Backend (Java - Spring Boot):**
