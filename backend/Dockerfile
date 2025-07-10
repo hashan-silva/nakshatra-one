@@ -6,6 +6,8 @@ WORKDIR /home/appuser/app
 
 COPY --chown=appuser:appgroup . .
 
+RUN chmod +x ./mvnw
+
 RUN chmod -R go-w .
 
 RUN ./mvnw package -DskipTests
