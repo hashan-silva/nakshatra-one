@@ -146,33 +146,4 @@ data "oci_core_images" "oracle_linux" {
   # Add more filters if needed to get a specific image
 }
 
-# Output the public IP of the frontend instance
-output "frontend_public_ip" {
-  value = oci_core_instance.frontend_instance.public_ip
-}
 
-# Output the private IP of the backend instance
-output "backend_private_ip" {
-  value = oci_core_instance.backend_instance.private_ip
-}
-
-# Variables for customization
-variable "compartment_ocid" {
-  description = "OCID of the compartment where resources will be deployed."
-  type        = string
-}
-
-variable "ssh_public_key" {
-  description = "Public SSH key for accessing the instances."
-  type        = string
-}
-
-variable "frontend_docker_image" {
-  description = "Docker image for the frontend application (e.g., 'phx.ocir.io/your_tenancy/your_repo/frontend:latest')."
-  type        = string
-}
-
-variable "backend_docker_image" {
-  description = "Docker image for the backend application (e.g., 'phx.ocir.io/your_tenancy/your_repo/backend:latest')."
-  type        = string
-}

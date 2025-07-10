@@ -38,6 +38,11 @@ Analyze existing code before making changes.
         -   `/services`
         -   `/models`
         -   `/pages`
+-   **Terraform:**
+    -   `/terraform`
+        -   `main.tf`: Main configuration file.
+        -   `variables.tf`: Input variables for customization.
+        -   `outputs.tf`: Output values from the deployment.
 
 **API Conventions:**
 
@@ -53,19 +58,13 @@ Analyze existing code before making changes.
 -   Ensure time zone accuracy in all planetary calculations.
 -   Use DTOs for request/response objects.
 
----
-
-### Best Practices:
-
--   Document new API endpoints using Swagger.
--   Follow the Angular style guide, creating modular features.
--   Ensure time zone accuracy in all planetary calculations.
--   Use DTOs for request/response objects.
-
-### Code Quality and Linting
+**Code Quality and Linting:**
 
 -   **Backend (Java/Spring Boot):** Run `mvn validate` to check for code quality issues and enforce coding standards.
 -   **Frontend (Angular):** Run `ng lint` to identify and fix linting issues.
+-   **Terraform:**
+    -   Run `terraform validate` to check for syntax errors and configuration issues.
+    -   Run `terraform fmt -check=true -diff=true` to check for formatting issues.
 
 ---
 

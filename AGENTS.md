@@ -70,12 +70,44 @@ Agents working on this project should follow these core principles:
 
 ---
 
+### 📁 File Organization
+
+**Backend**
+/src/main/com/hashan0314/nakshatraone
+    - /controller
+    - /service
+    - /model
+    - /util
+    - /config
+
+**Frontend**
+/src/app
+    - /components
+    - /services
+    - /models
+    - /pages
+
+**Terraform**
+/terraform
+    - `main.tf`: Main configuration file.
+    - `variables.tf`: Input variables for customization.
+    - `outputs.tf`: Output values from the deployment.
+
+---
+
 ### Best Practices
 - Document each API endpoint using Swagger
 - Follow Angular style guide (modularize features)
 - Write unit/integration tests (JUnit for backend, Jasmine/Karma for frontend)
 - Ensure time zone accuracy in all planetary calculations
----
+
+### Code Quality and Linting
+
+-   **Backend (Java/Spring Boot):** Run `mvn validate` to check for code quality issues and enforce coding standards.
+-   **Frontend (Angular):** Run `ng lint` to identify and fix linting issues.
+-   **Terraform:**
+    -   Run `terraform validate` to check for syntax errors and configuration issues.
+    -   Run `terraform fmt -check=true -diff=true` to check for formatting issues.
 
 ### Best Practices
 - Document each API endpoint using Swagger
