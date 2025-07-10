@@ -1,8 +1,13 @@
 
 # Configure the Oracle Cloud Infrastructure (OCI) Provider
 provider "oci" {
-  # Configuration for OCI provider (e.g., tenancy_ocid, user_ocid, fingerprint, private_key_path, region)
-  # These can be sourced from environment variables or ~/.oci/config
+  auth = "InstancePrincipal" # Use Instance Principal for CI/CD
+  # Alternatively, for API Key authentication via environment variables:
+  # tenancy_ocid = var.tenancy_ocid
+  # user_ocid = var.user_ocid
+  # fingerprint = var.fingerprint
+  # private_key_path = var.private_key_path
+  # region = var.region
 }
 
 # Define a Virtual Cloud Network (VCN)
