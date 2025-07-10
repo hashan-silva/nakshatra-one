@@ -151,4 +151,26 @@ data "oci_core_images" "oracle_linux" {
   # Add more filters if needed to get a specific image
 }
 
+# Dynamic Group for Compute Instances
+resource "oci_identity_dynamic_group" "instance_dynamic_group" {
+  compartment_id = var.compartment_ocid
+  description = "Dynamic Group for NakshatraOne Compute Instances"
+  name = "NakshatraOneInstancesDynamicGroup"
+  matching_rule = "ALL {instance.compartment.id = '%s'}" # Matches all instances in the compartment
+}
+
+# IAM Policy for Instance Principal
+resource "oci_identity_policy" "instance_principal_policy" {
+  compartment_id = var.compartment_ocid
+  description = "Policy for NakshatraOne Compute Instances to manage VNICs, read images, and pull from OCIR"
+  name = "NakshatraOneInstancePrincipalPolicy"
+  statements = [
+    "Allow dynamic-group oci_identity_dynamic_group.instance_dynamic_group to manage vnics in compartment id %s",
+    "Allow dynamic-group oci_identity_dynamic_group.instance_dynamic_group to read instance-images in compartment id %s",
+    "Allow dynamic-group oci_identity_dynamic_group.instance_dynamic_group to use ons-topics in compartment id %s", # For notifications if needed
+    "Allow dynamic-group oci_identity_dynamic_group.instance_dynamic_group to manage repos in compartment id %s", # For pulling from OCIR
+    "Allow dynamic-group oci_identity_dynamic_group.instance_dynamic_group to inspect repos in tenancy", # For inspecting OCIR repos
+  ]
+}
+
 

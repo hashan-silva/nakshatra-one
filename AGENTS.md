@@ -122,6 +122,13 @@ Agents working on this project should follow these core principles:
 
 ---
 
+### Resource Provisioning Best Practices
+
+-   **Free Tier Services:** Always prioritize the use of Oracle Cloud Infrastructure (OCI) Free Tier eligible services and shapes (e.g., `VM.Standard.E2.1.Micro` for compute instances) to minimize costs.
+-   **Least Privilege IAM Policies:** When creating resources, ensure that IAM policies are configured with the principle of least privilege. Grant only the necessary permissions for resources to perform their intended functions.
+
+---
+
 ### Security Vulnerability Checks
 
 -   **Backend (Java/Spring Boot):**
